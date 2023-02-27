@@ -18,4 +18,8 @@ app.post('/', (request, response) => {
   response.json({ response: webhookResponse });
 });
 
+app.get('/', (request, response) => {
+  response.json({ response: "undefined" }) // i'll eventually log the ip 
+});
+
 app.listen(process.env.PORT);
