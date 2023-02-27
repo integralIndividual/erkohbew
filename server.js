@@ -4,7 +4,7 @@
 // slightly modified on 2/24/2023
 
 const express = require("express");
-const app = express()
+const app = express();
 
 // why isn't this enabled by default??
 app.use(express.json());
@@ -19,7 +19,7 @@ app.post('/', (request, response) => {
 });
 
 app.get('/', (request, response) => {
-  response.json({ response: "undefined" }) // i'll eventually log the ip 
+  response.json({ response: "undefined" }); // i'll eventually log the ip 
 });
 
 app.listen(process.env.PORT);
