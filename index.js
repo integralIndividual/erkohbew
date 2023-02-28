@@ -11,7 +11,7 @@ app.use(express.json());
 
 const discord = require("discord.js");
 
-app.post('/', (request, response) => {
+app.post('/', async (request, response) => {
   let webhook = new discord.WebhookClient({ url: request.body.webhook });
   let webhookResponse = await webhook.send(request.body);
 
