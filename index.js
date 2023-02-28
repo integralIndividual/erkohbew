@@ -13,9 +13,10 @@ const discord = require("discord.js");
 
 app.post('/', (request, response) => {
   let webhook = new discord.WebhookClient({ url: request.body.webhook });
-  let webhookResponse = webhook.send(request.body);
+  let webhookResponse = await webhook.send(request.body);
 
   response.json({ response: webhookResponse });
 });
 
 app.listen(process.env.PORT);
+
